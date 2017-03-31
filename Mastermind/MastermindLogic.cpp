@@ -90,7 +90,7 @@ std::vector<KeyPeg>  CodePegColorGroup::GetResults() const{
         // MatchTypes::MATCHED_ALL      - generate colored KeyPeg if totalMatchGuessCount >= m_groupMembers.size()
         auto itrMatchAll = m_matchType2GuessMatchCount.find(MatchTypes::MATCHED_ALL);
         
-        for (auto i = 0;
+        for (decltype(itrMatchAll->second) i = 0;
              itrMatchAll != m_matchType2GuessMatchCount.end() &&
              i < itrMatchAll->second;
              i++){
@@ -101,7 +101,7 @@ std::vector<KeyPeg>  CodePegColorGroup::GetResults() const{
         
         // MatchTypes::MATCHED_COLOR_ONLY   - generate colored KeyPeg if totalMatchGuessCount >= m_groupMembers.size()
         auto itrMatchColor = m_matchType2GuessMatchCount.find(MatchTypes::MATCHED_COLOR_ONLY);
-        for (auto i = 0;
+        for (decltype(itrMatchColor->second) i = 0;
              itrMatchColor != m_matchType2GuessMatchCount.end() &&
              totalMatchGuessCount > excessMatchCount &&
              i < m_matchType2GuessMatchCount.at(MatchTypes::MATCHED_COLOR_ONLY)

@@ -16,9 +16,9 @@ using namespace Mastermind::Core;
 
 bool BasicCodePegValidator::IsValid(Mastermind::Core::CodePeg_Colors cp_c){
     
-    short index = CoreConverter::to_index(cp_c);
+    auto index = CoreConverter::to_index(cp_c);
     
-    return (index < this->m_maxColors && index != -1);
+    return (index < static_cast<decltype(index)>(this->m_maxColors) && index != -1);
 }
 
 

@@ -11,6 +11,7 @@
 
 #include "MastermindCore.hpp"
 #include <vector>
+#include <memory>
 
 namespace Mastermind{
 namespace Gen{

@@ -12,6 +12,7 @@
 #include "MastermindCore.hpp"
 #include <map>
 #include <vector>
+#include <algorithm>
 
 namespace Mastermind{
 namespace Logic{

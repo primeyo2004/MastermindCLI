@@ -47,7 +47,7 @@ bool Game::Run(){
     GameParamsPtr gameParamsPtr = Factory::getIntance().getParams();
     SimpleUIPtr   uiPtr = Factory::getIntance().getUserInterface();
     
-    for (auto i = 0; i < gameParamsPtr->MaxAttempts(); ++i){
+    for (decltype(gameParamsPtr->MaxAttempts()) i = 0; i < gameParamsPtr->MaxAttempts(); ++i){
         
         std::ostringstream stroutstrm;
         stroutstrm << "Attempt No. ( " << i+1 << " ) - Please enter  two-letter color code [??] or  blank to abort:";
@@ -60,7 +60,7 @@ bool Game::Run(){
         std::vector<CodePeg> guessCode;
         CodePeg_Colors       cp_c;
         
-        for (auto j = 0; j < gameParamsPtr->ColumnCount(); ++j){
+        for (decltype(gameParamsPtr->ColumnCount()) j = 0; j < gameParamsPtr->ColumnCount(); ++j){
             
             stroutstrm.str("");
             stroutstrm << "  Entry for Column No. ( " << j+1 << " ): ";

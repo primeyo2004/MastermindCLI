@@ -10,7 +10,7 @@
 #define MastermindCore_hpp
 
 #include <string>
-
+#include <memory>
 
 namespace Mastermind{
 namespace Core{
